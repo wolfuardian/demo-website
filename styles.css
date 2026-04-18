@@ -430,6 +430,101 @@ button#submit-btn {
   border: 0.5px solid var(--color-border-secondary);
 }
 
+/* ─── 確認頁專用 ─── */
+
+/* 成功 hero */
+.success-hero { text-align: center; padding: 1rem 0 2rem; }
+.success-hero svg { display: block; margin: 0 auto 1rem; }
+.success-hero h1 { font-size: 22px; margin: 0 0 8px; font-weight: 500; }
+.success-hero p {
+  font-size: 14px; color: var(--color-text-secondary);
+  margin: 0; line-height: 1.6;
+}
+.success-hero strong { color: var(--color-text-primary); font-weight: 500; }
+
+/* 提交後資料列（編號 / 時間） */
+.submission-meta {
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-md);
+  padding: 14px 18px; margin-bottom: 1.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap;
+}
+.submission-meta .label {
+  font-size: 11px; color: var(--color-text-secondary); margin-bottom: 4px;
+}
+.submission-meta .value-id {
+  font-size: 15px; font-weight: 500;
+  font-family: var(--font-mono); letter-spacing: 0.02em;
+}
+.submission-meta .value-time {
+  font-size: 13px; font-family: var(--font-mono);
+}
+.submission-meta .right { text-align: right; }
+
+/* 你提交的內容 — label/value 表 */
+.summary {
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+.summary dl {
+  display: grid; grid-template-columns: 90px 1fr;
+  margin: 0; font-size: 13px;
+}
+.summary dt, .summary dd {
+  padding: 10px 14px; margin: 0;
+  border-top: 0.5px solid var(--color-border-tertiary);
+}
+.summary dt:first-of-type, .summary dd:first-of-type {
+  border-top: none;
+}
+.summary dt {
+  color: var(--color-text-secondary);
+  background: var(--color-background-secondary);
+}
+.summary dd { border-left: 0.5px solid var(--color-border-tertiary); line-height: 1.6; }
+.summary dd.mono { font-family: var(--font-mono); font-size: 12px; }
+
+/* 進度追蹤器 */
+.progress {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 4px; position: relative;
+}
+.progress::before {
+  content: "";
+  position: absolute; top: 14px; left: 12.5%; right: 12.5%;
+  height: 0.5px; background: var(--color-border-tertiary);
+  z-index: 0;
+}
+.progress-step {
+  text-align: center; position: relative; z-index: 1;
+}
+.progress-circle {
+  width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 8px;
+  font-size: 12px; font-weight: 500;
+}
+.progress-circle.done    { background: var(--color-background-success); color: var(--color-text-success); }
+.progress-circle.current { background: var(--color-background-info);    color: var(--color-text-info); }
+.progress-circle.pending {
+  background: var(--color-background-primary);
+  color: var(--color-text-secondary);
+  border: 0.5px solid var(--color-border-secondary);
+}
+.progress-title {
+  font-size: 12px; font-weight: 500;
+}
+.progress-step.is-pending .progress-title { color: var(--color-text-secondary); }
+.progress-sub {
+  font-size: 10px; color: var(--color-text-tertiary); margin-top: 2px;
+}
+
+/* Info banner 帶標題的變體 */
+.info-banner.has-title strong { display: block; margin-bottom: 4px; }
+.info-banner .mono { font-family: var(--font-mono); font-size: 12px; }
+
 /* 窄螢幕 */
 @media (max-width: 520px) {
   .site { margin: 0; border-radius: 0; padding: 1.25rem; border: none; }
@@ -440,4 +535,5 @@ button#submit-btn {
   .form-row-2 { grid-template-columns: 1fr; }
   .scope-grid { grid-template-columns: 1fr; }
   .usage-grid { grid-template-columns: 1fr; }
+  .summary dl { grid-template-columns: 80px 1fr; }
 }
