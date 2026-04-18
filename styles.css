@@ -202,20 +202,97 @@ html, body {
 .c-amber  { fill: #d9a650; }
 .c-blue   { fill: #7a9bc4; }
 
-/* 流程步驟 */
-.steps {
-  display: grid; grid-template-columns: repeat(5, 1fr);
-  gap: 6px; text-align: center; margin-bottom: 1.75rem;
+/* ─── 委託流程（10 步 3 階段） ─── */
+.flow-header { margin-bottom: 1.5rem; }
+.flow-subtitle {
+  font-size: 12px; color: var(--color-text-tertiary); margin: 0;
 }
-.step-num {
-  width: 28px; height: 28px; border-radius: 50%;
+.flow-legend {
+  display: inline-flex; align-items: center;
+  gap: 4px; margin-left: 6px;
+}
+.flow-legend .chip {
+  width: 8px; height: 8px; border-radius: 2px; display: inline-block;
+}
+.flow-legend .chip.pay  { background: var(--color-background-warning); }
+.flow-legend .chip.edit { background: var(--color-background-info); }
+
+.flow-phase { margin-bottom: 1.75rem; }
+.flow-phase:last-child { margin-bottom: 0.5rem; }
+.phase-label {
+  font-size: 11px; color: var(--color-text-secondary); font-weight: 500;
+  margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.06em;
+}
+
+.flow-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.flow-grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.flow-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+
+/* 流程卡：基礎（中性） */
+.flow-card {
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 12px;
+}
+.flow-card-head {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 4px;
+}
+.flow-num {
+  width: 22px; height: 22px; border-radius: 50%;
   background: var(--color-background-secondary);
   color: var(--color-text-primary);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 12px; font-weight: 500; margin: 0 auto 6px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 500; flex-shrink: 0;
 }
-.step-title { font-size: 12px; font-weight: 500; }
-.step-sub   { font-size: 10px; color: var(--color-text-secondary); margin-top: 2px; }
+.flow-title { font-size: 13px; font-weight: 500; }
+.flow-desc {
+  font-size: 11px; color: var(--color-text-secondary);
+  line-height: 1.5; padding-left: 30px;
+}
+
+/* 繪製階段 5 格 — 置中緊湊、無外框 */
+.flow-card.compact {
+  padding: 10px; text-align: center; border: none;
+}
+.flow-card.compact .flow-num { margin: 0 auto 6px; }
+.flow-card.compact .flow-title { display: block; font-size: 12px; }
+.flow-card.compact .flow-sub {
+  font-size: 10px; color: var(--color-text-tertiary); margin-top: 2px;
+}
+
+/* 結案階段 2 格 — 橫排 */
+.flow-card.inline { display: flex; align-items: center; gap: 10px; }
+.flow-card.inline .flow-sub {
+  font-size: 11px; color: var(--color-text-tertiary); margin-top: 2px;
+}
+
+/* 付款色（warning）與修改確認色（info）— 反色實心圓 */
+.flow-card.pay {
+  background: var(--color-background-warning); border: none;
+}
+.flow-card.pay .flow-title,
+.flow-card.pay .flow-sub { color: var(--color-text-warning); }
+.flow-card.pay .flow-sub { opacity: 0.75; }
+.flow-card.pay .flow-num {
+  background: var(--color-text-warning);
+  color: var(--color-background-warning);
+}
+
+.flow-card.edit {
+  background: var(--color-background-info); border: none;
+}
+.flow-card.edit .flow-title,
+.flow-card.edit .flow-sub { color: var(--color-text-info); }
+.flow-card.edit .flow-sub { opacity: 0.75; }
+.flow-card.edit .flow-num {
+  background: var(--color-text-info);
+  color: var(--color-background-info);
+}
+
+.flow-note {
+  font-size: 11px; color: var(--color-text-tertiary);
+  margin: 10px 0 0; line-height: 1.6;
+}
 
 /* 價格 */
 .price-grid {
@@ -547,7 +624,9 @@ button#submit-btn {
 @media (max-width: 520px) {
   .site { margin: 0; border-radius: 0; padding: 1.25rem; border: none; }
   .works-grid { grid-template-columns: repeat(2, 1fr); }
-  .steps { grid-template-columns: repeat(5, 1fr); font-size: 11px; }
+  .flow-grid-3 { grid-template-columns: 1fr; }
+  .flow-grid-2 { grid-template-columns: 1fr; }
+  .flow-card.inline .flow-num { margin: 0; }
   .price-grid { grid-template-columns: 1fr; }
   .terms-grid { grid-template-columns: 1fr; }
   .form-row-2 { grid-template-columns: 1fr; }
