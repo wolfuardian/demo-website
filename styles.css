@@ -5,13 +5,20 @@
   --color-background-tertiary: #ebe5d8;
   --color-background-success: #e8f0e3;
 
-  --color-text-primary: #2a2620;
+  --color-background-danger:  #f4e0db;
+  --color-background-warning: #f5ead1;
+  --color-background-info:    #e4e9ef;
+
+  --color-text-primary:   #2a2620;
   --color-text-secondary: #6b6558;
-  --color-text-tertiary: #9a9485;
-  --color-text-success: #4a6b3a;
+  --color-text-tertiary:  #9a9485;
+  --color-text-success:   #4a6b3a;
+  --color-text-danger:    #a04028;
+  --color-text-warning:   #8a6420;
+  --color-text-info:      #3a4a5e;
 
   --color-border-secondary: #c9c1ae;
-  --color-border-tertiary: #d9d3c2;
+  --color-border-tertiary:  #d9d3c2;
 
   --border-radius-md: 8px;
   --border-radius-lg: 14px;
@@ -262,6 +269,167 @@ button#submit-btn {
 .site-footer a:hover { color: var(--color-text-secondary); }
 .social { display: flex; gap: 12px; }
 
+/* ─── 須知獨立頁專用 ─── */
+
+/* 導覽目前頁強調 */
+.nav-links a.is-current {
+  color: var(--color-text-primary);
+  font-weight: 500;
+  border-bottom: 1px solid var(--color-text-primary);
+  padding-bottom: 2px;
+}
+
+/* 回首頁連結 */
+.back-link {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+}
+.back-link:hover { color: var(--color-text-primary); }
+
+/* 頁面標頭 */
+.page-header { margin-bottom: 2rem; }
+.page-header h1 { font-size: 22px; margin: 0 0 8px; font-weight: 500; }
+.page-updated {
+  font-size: 12px; color: var(--color-text-tertiary); margin-bottom: 1rem;
+}
+.page-lead {
+  font-size: 14px; color: var(--color-text-secondary);
+  line-height: 1.7; margin: 0;
+}
+
+/* 通用 prose 區段 */
+.prose { font-size: 14px; color: var(--color-text-secondary); line-height: 1.7; margin: 0; }
+.prose strong { color: var(--color-text-primary); font-weight: 500; }
+.note { font-size: 12px; color: var(--color-text-tertiary); margin: 10px 0 0; }
+
+/* 接受 / 不接受 並列卡 */
+.scope-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.scope-card {
+  border-radius: var(--border-radius-md);
+  padding: 14px 16px;
+}
+.scope-card ul {
+  margin: 0; padding-left: 16px;
+  font-size: 13px; line-height: 1.8;
+}
+.scope-title {
+  font-size: 12px; font-weight: 500; margin-bottom: 8px;
+}
+.scope-card.ok    { background: var(--color-background-success); color: var(--color-text-success); }
+.scope-card.ok ul    { color: var(--color-text-success); }
+.scope-card.no    { background: var(--color-background-danger); color: var(--color-text-danger); }
+.scope-card.no ul    { color: var(--color-text-danger); }
+
+/* 條列盒 — 給「請提供以下三項資訊」 */
+.list-box {
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-md);
+  padding: 12px 16px;
+  font-size: 13px; line-height: 1.8;
+}
+.list-box .idx { color: var(--color-text-tertiary); margin-right: 6px; }
+
+/* 流程一行字 */
+.flow-inline {
+  font-size: 13px; line-height: 1.9;
+  color: var(--color-text-primary);
+}
+.flow-inline strong { font-weight: 500; }
+
+/* 使用方式三欄 */
+.usage-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+}
+.usage-card {
+  border-radius: var(--border-radius-md);
+  padding: 12px 14px;
+}
+.usage-card ul {
+  margin: 0; padding-left: 14px; font-size: 12px; line-height: 1.7;
+}
+.usage-label {
+  font-size: 11px; font-weight: 500; margin-bottom: 8px;
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+.usage-card.allow { background: var(--color-background-success); color: var(--color-text-success); }
+.usage-card.allow ul { color: var(--color-text-success); }
+.usage-card.negotiate { background: var(--color-background-warning); color: var(--color-text-warning); }
+.usage-card.negotiate ul { color: var(--color-text-warning); }
+.usage-card.forbid { background: var(--color-background-danger); color: var(--color-text-danger); }
+.usage-card.forbid ul { color: var(--color-text-danger); }
+
+/* 退款表 */
+.refund-table-wrap {
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+.refund-table {
+  width: 100%; font-size: 13px; border-collapse: collapse;
+}
+.refund-table thead tr { background: var(--color-background-secondary); }
+.refund-table th {
+  text-align: left; padding: 10px 14px;
+  font-weight: 500; color: var(--color-text-secondary); font-size: 12px;
+}
+.refund-table th.num { text-align: right; }
+.refund-table td { padding: 10px 14px; }
+.refund-table td.num { text-align: right; font-weight: 500; }
+.refund-table td.ok { color: var(--color-text-success); }
+.refund-table td.no { color: var(--color-text-danger); }
+.refund-table tbody tr { border-top: 0.5px solid var(--color-border-tertiary); }
+
+/* 聯絡資訊表 */
+.contact-box {
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-md);
+  padding: 14px 16px;
+}
+.contact-grid {
+  display: grid; grid-template-columns: 80px 1fr;
+  gap: 6px 12px; font-size: 13px;
+}
+.contact-grid dt { color: var(--color-text-secondary); margin: 0; }
+.contact-grid dd { margin: 0; }
+.contact-grid dd.mono { font-family: var(--font-mono); font-size: 12px; }
+
+/* 資訊橫幅 */
+.info-banner {
+  background: var(--color-background-info);
+  color: var(--color-text-info);
+  border-radius: var(--border-radius-md);
+  padding: 14px 18px; margin-bottom: 1.5rem;
+  font-size: 13px; line-height: 1.6;
+}
+.info-banner strong { font-weight: 500; }
+
+/* 頁尾動作列 */
+.page-actions {
+  display: flex; gap: 10px; justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 0.5px solid var(--color-border-tertiary);
+  flex-wrap: wrap;
+}
+.page-actions .btn-ghost,
+.page-actions .btn-primary {
+  font-size: 13px;
+  padding: 9px 22px;
+  border-radius: var(--border-radius-md);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+}
+.page-actions .btn-ghost {
+  color: var(--color-text-primary);
+  background: transparent;
+  border: 0.5px solid var(--color-border-secondary);
+}
+
 /* 窄螢幕 */
 @media (max-width: 520px) {
   .site { margin: 0; border-radius: 0; padding: 1.25rem; border: none; }
@@ -270,4 +438,6 @@ button#submit-btn {
   .price-grid { grid-template-columns: 1fr; }
   .terms-grid { grid-template-columns: 1fr; }
   .form-row-2 { grid-template-columns: 1fr; }
+  .scope-grid { grid-template-columns: 1fr; }
+  .usage-grid { grid-template-columns: 1fr; }
 }
