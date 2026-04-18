@@ -386,7 +386,7 @@ button#submit-btn {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
   margin-bottom: 2rem;
 }
@@ -448,6 +448,40 @@ button#submit-btn {
   border-radius: 4px;
   max-height: 64px;
 }
+
+/* Templates 預覽 — 簡化模板卡片 */
+.preview-templates {
+  background: var(--color-background-tertiary);
+  justify-content: center;
+  align-items: center;
+}
+.preview-template-card {
+  width: 85%;
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: 6px;
+  padding: 10px 12px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.preview-template-head {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 2px;
+}
+.preview-template-title { font-size: 10px; font-weight: 500; }
+.preview-copy-btn {
+  font-size: 9px;
+  padding: 2px 8px;
+  background: var(--color-text-primary);
+  color: var(--color-background-primary);
+  border-radius: 4px;
+  font-weight: 500;
+}
+.preview-templates .preview-bar {
+  height: 5px;
+  background: var(--color-background-secondary);
+  border-radius: 2px;
+}
+.preview-templates .preview-bar.short { width: 60%; }
 
 .preview-casual {
   background: var(--color-background-primary);
@@ -511,6 +545,63 @@ button#submit-btn {
   border-top: 0.5px solid var(--color-border-tertiary);
   padding-top: 14px;
 }
+
+/* ─── 回覆模板頁 ─── */
+.template-card {
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+.template-head {
+  display: flex; justify-content: space-between;
+  align-items: flex-start; gap: 12px;
+  margin-bottom: 12px;
+}
+.template-title { font-size: 15px; font-weight: 500; }
+.template-desc {
+  font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;
+}
+.template-meta {
+  font-size: 11px; color: var(--color-text-tertiary);
+  font-family: var(--font-mono); margin-bottom: 10px;
+}
+.template-body {
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-md);
+  padding: 14px 16px;
+  font-size: 13px; line-height: 1.8;
+  white-space: pre-wrap;
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+}
+
+.copy-btn {
+  font-size: 12px; font-weight: 500;
+  padding: 6px 14px;
+  background: var(--color-text-primary);
+  color: var(--color-background-primary);
+  border: none;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+  transition: opacity 0.15s;
+}
+.copy-btn:hover { opacity: 0.85; }
+.copy-btn.is-copied {
+  background: var(--color-text-success);
+}
+
+.copy-toast {
+  position: sticky; bottom: 10px;
+  margin-top: 10px; text-align: center;
+  font-size: 12px; color: var(--color-text-success);
+  opacity: 0; transition: opacity 0.2s;
+  pointer-events: none;
+}
+.copy-toast.is-visible { opacity: 1; }
 
 /* ─── 須知獨立頁專用 ─── */
 

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>委託詢問回覆模板 — EOS Studio</title>
+<meta name="description" content="兩版可複製的委託詢問回覆模板，一鍵複製到剪貼簿。"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<main class="site">
+
+  <a href="index.html" class="back-link">← 目錄</a>
+
+  <header class="page-header">
+    <h1>委託詢問回覆模板</h1>
+    <p class="page-lead">點「複製」後可直接貼到 Messenger / LINE / Discord</p>
+  </header>
+
+  <article class="template-card">
+    <header class="template-head">
+      <div>
+        <div class="template-title">完整資訊版</div>
+        <div class="template-desc">初次來訊者一次看完所有資訊</div>
+      </div>
+      <button class="copy-btn" data-copy="c1">複製</button>
+    </header>
+    <div class="template-meta">約 320 字 · 單則訊息可送出</div>
+    <div id="c1" class="template-body">嗨～謝謝私訊 🙌
+
+📌 狀態：開放中 · 剩 2 位
+
+💰 價目（NT$）
+• 頭像：Q版 500 / 寫實 800
+• 半身 1,500
+• 全身 3,000
+• 簡單背景 +500
+• 商業用途 x2
+
+📋 流程
+訊息 → 報價 → 訂金50% → 草稿（可改2次）→ 上色（可改1次）→ 尾款 → 交稿
+交期約 2–4 週
+
+⚠️ 須知重點
+• 開工前取消全額退還
+• 草稿完成後取消訂金不退
+• 修改超過次數每次加收 $XXX
+• 不給 PSD / 原始檔
+• 禁 AI 訓練 / NFT / 轉售 / 冒名
+
+📖 完整須知 👉 [你的連結]
+
+有興趣告訴我這 3 件事：
+① 委託類型（頭像 / 半身 / 全身 / 其他）
+② 預算範圍
+③ 參考圖 1–3 張
+
+感謝～ ♡</div>
+  </article>
+
+  <article class="template-card">
+    <header class="template-head">
+      <div>
+        <div class="template-title">精簡導流版</div>
+        <div class="template-desc">把判斷丟回須知頁，節省對話成本</div>
+      </div>
+      <button class="copy-btn" data-copy="c2">複製</button>
+    </header>
+    <div class="template-meta">約 85 字 · 適合追問或快速回覆</div>
+    <div id="c2" class="template-body">嗨～謝謝私訊 🙌
+
+📌 開放中 · 剩 2 位
+📖 須知 👉 [你的連結]
+
+看完須知後告訴我：
+① 類型（頭像 / 半身 / 全身）
+② 預算
+③ 參考圖
+
+我會回報價 ✨</div>
+  </article>
+
+  <div class="copy-toast" id="toast">已複製到剪貼簿</div>
+
+</main>
+
+<script>
+  document.querySelectorAll('button[data-copy]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const el = document.getElementById(btn.dataset.copy);
+      const toast = document.getElementById('toast');
+      const text = el.textContent;
+      const original = btn.textContent;
+
+      try {
+        await navigator.clipboard.writeText(text);
+        btn.textContent = '✓ 已複製';
+        btn.classList.add('is-copied');
+        toast.classList.add('is-visible');
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.classList.remove('is-copied');
+          toast.classList.remove('is-visible');
+        }, 1800);
+      } catch {
+        // Clipboard API 被拒（非 HTTPS / 無權限）— 選取文字請使用者 Ctrl+C
+        const range = document.createRange();
+        range.selectNode(el);
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        btn.textContent = '請按 Ctrl+C';
+        setTimeout(() => { btn.textContent = original; }, 2500);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
