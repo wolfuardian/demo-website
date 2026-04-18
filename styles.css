@@ -203,19 +203,33 @@ html, body {
 .c-blue   { fill: #7a9bc4; }
 
 /* ─── 委託流程（10 步 3 階段） ─── */
-.flow-header { margin-bottom: 1.5rem; }
+.flow-header { margin-bottom: 1rem; }
 .flow-subtitle {
   font-size: 12px; color: var(--color-text-tertiary); margin: 0;
 }
-.flow-legend {
-  display: inline-flex; align-items: center;
-  gap: 4px; margin-left: 6px;
+
+/* 圖例列 — 獨立資訊帶，解釋流程顏色編碼 */
+.legend-bar {
+  display: flex; align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-md);
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
 }
-.flow-legend .chip {
-  width: 8px; height: 8px; border-radius: 2px; display: inline-block;
+.legend-bar .label {
+  font-size: 11px; color: var(--color-text-secondary);
+  font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
 }
-.flow-legend .chip.pay  { background: var(--color-background-warning); }
-.flow-legend .chip.edit { background: var(--color-background-info); }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+.legend-item .chip { width: 14px; height: 14px; border-radius: 4px; display: inline-block; }
+.legend-item .chip.normal {
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-secondary);
+}
+.legend-item .chip.pay  { background: var(--color-background-warning); }
+.legend-item .chip.edit { background: var(--color-background-info); }
 
 .flow-phase { margin-bottom: 1.75rem; }
 .flow-phase:last-child { margin-bottom: 0.5rem; }
