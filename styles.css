@@ -603,6 +603,18 @@ button#submit-btn {
 }
 .copy-toast.is-visible { opacity: 1; }
 
+.templates-footer-nav {
+  margin-top: 2rem; padding-top: 1rem;
+  border-top: 0.5px solid var(--color-border-tertiary);
+  display: flex; justify-content: center;
+  gap: 12px; font-size: 12px; flex-wrap: wrap;
+}
+.templates-footer-nav a {
+  color: var(--color-text-secondary); text-decoration: none;
+}
+.templates-footer-nav a:hover { color: var(--color-text-primary); }
+.templates-footer-nav .sep { color: var(--color-text-tertiary); }
+
 /* ─── 須知獨立頁專用 ─── */
 
 /* 導覽目前頁強調 */
