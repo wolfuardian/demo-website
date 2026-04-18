@@ -1,0 +1,202 @@
+<h2 class="sr-only">繪師接案網站 MVP 模擬頁面</h2>
+
+<div style="background: var(--color-background-tertiary); border-radius: var(--border-radius-lg); padding: 12px; margin: 0.5rem 0;">
+
+  <div style="display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: var(--color-background-secondary); border-radius: var(--border-radius-md); margin-bottom: 10px;">
+    <div style="display: flex; gap: 5px;">
+      <span style="width: 9px; height: 9px; border-radius: 50%; background: #D85A30; display: inline-block;"></span>
+      <span style="width: 9px; height: 9px; border-radius: 50%; background: #EF9F27; display: inline-block;"></span>
+      <span style="width: 9px; height: 9px; border-radius: 50%; background: #97C459; display: inline-block;"></span>
+    </div>
+    <div style="flex: 1; text-align: center; font-size: 11px; color: var(--color-text-secondary); font-family: var(--font-mono);">eos-studio.carrd.co</div>
+  </div>
+
+  <div style="background: var(--color-background-primary); border-radius: var(--border-radius-md); padding: 1.5rem 1.75rem; border: 0.5px solid var(--color-border-tertiary);">
+
+    <nav style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 14px; border-bottom: 0.5px solid var(--color-border-tertiary); margin-bottom: 1.75rem; flex-wrap: wrap; gap: 8px;">
+      <div style="font-size: 16px; font-weight: 500; letter-spacing: 0.02em;">EOS Studio</div>
+      <div style="display: flex; align-items: center; gap: 14px; font-size: 13px;">
+        <a href="#works" data-nav style="color: var(--color-text-secondary); text-decoration: none;">作品</a>
+        <a href="#commission" data-nav style="color: var(--color-text-secondary); text-decoration: none;">委託</a>
+        <a href="#terms" data-nav style="color: var(--color-text-secondary); text-decoration: none;">須知</a>
+        <a href="#contact" data-nav style="color: var(--color-text-secondary); text-decoration: none;">聯絡</a>
+        <span style="display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; background: var(--color-background-success); color: var(--color-text-success); border-radius: 999px; font-size: 11px; font-weight: 500;">
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: currentColor; display: inline-block;"></span>
+          開放中
+        </span>
+      </div>
+    </nav>
+
+    <section style="text-align: center; padding: 1rem 0 1.75rem;">
+      <h1 style="font-size: 26px; margin: 0 0 8px; font-weight: 500;">Hi, 我是 EOS</h1>
+      <p style="color: var(--color-text-secondary); font-size: 14px; margin: 0 0 1.5rem; line-height: 1.6;">原創角色插畫 · VTuber 立繪 · OC 設計<br/>在台北接案的小繪師</p>
+      <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+        <a href="#works" data-nav style="display: inline-block; padding: 9px 22px; background: var(--color-text-primary); color: var(--color-background-primary); text-decoration: none; border-radius: var(--border-radius-md); font-size: 13px; font-weight: 500;">查看作品</a>
+        <a href="#contact" data-nav style="display: inline-block; padding: 9px 22px; border: 0.5px solid var(--color-border-secondary); color: var(--color-text-primary); text-decoration: none; border-radius: var(--border-radius-md); font-size: 13px; font-weight: 500;">委託詢問</a>
+      </div>
+    </section>
+
+    <div style="background: var(--color-background-success); border-radius: var(--border-radius-md); padding: 14px 18px; margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+      <div>
+        <div style="font-size: 13px; color: var(--color-text-success); font-weight: 500; margin-bottom: 3px;">目前接受委託</div>
+        <div style="font-size: 11px; color: var(--color-text-success); opacity: 0.75;">預計交期 2–4 週 · 本月剩餘 2 個名額</div>
+      </div>
+      <a href="#contact" data-nav style="padding: 7px 14px; background: var(--color-text-success); color: var(--color-background-success); text-decoration: none; border-radius: var(--border-radius-md); font-size: 12px; font-weight: 500; white-space: nowrap;">立即詢問</a>
+    </div>
+
+    <section id="works" style="margin-bottom: 2.25rem; scroll-margin-top: 12px;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 1rem;">
+        <h2 style="font-size: 17px; margin: 0; font-weight: 500;">作品集</h2>
+        <a href="#" onclick="sendPrompt('展示完整作品集頁面的 mockup'); return false;" style="font-size: 12px; color: var(--color-text-secondary); text-decoration: none;">看更多 →</a>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
+        <div style="aspect-ratio: 4/5; background: var(--color-background-secondary); border-radius: var(--border-radius-md); display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 60 75" width="70%"><circle class="c-coral" cx="30" cy="28" r="13"/><ellipse class="c-coral" cx="30" cy="60" rx="20" ry="14"/></svg>
+        </div>
+        <div style="aspect-ratio: 4/5; background: var(--color-background-secondary); border-radius: var(--border-radius-md); display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 60 75" width="70%"><rect class="c-teal" x="15" y="15" width="30" height="30" rx="4"/><rect class="c-teal" x="10" y="50" width="40" height="15" rx="2"/></svg>
+        </div>
+        <div style="aspect-ratio: 4/5; background: var(--color-background-secondary); border-radius: var(--border-radius-md); display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 60 75" width="70%"><circle class="c-purple" cx="30" cy="25" r="12"/><path class="c-purple" d="M 15 45 Q 30 38 45 45 L 42 68 L 18 68 Z"/></svg>
+        </div>
+        <div style="aspect-ratio: 4/5; background: var(--color-background-secondary); border-radius: var(--border-radius-md); display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 60 75" width="70%"><ellipse class="c-pink" cx="30" cy="30" rx="18" ry="14"/><rect class="c-pink" x="22" y="42" width="16" height="22" rx="2"/></svg>
+        </div>
+        <div style="aspect-ratio: 4/5; background: var(--color-background-secondary); border-radius: var(--border-radius-md); display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 60 75" width="70%"><polygon class="c-amber" points="30,12 45,32 40,60 20,60 15,32"/></svg>
+        </div>
+        <div style="aspect-ratio: 4/5; background: var(--color-background-secondary); border-radius: var(--border-radius-md); display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 60 75" width="70%"><circle class="c-blue" cx="30" cy="30" r="15"/><rect class="c-blue" x="12" y="48" width="36" height="18" rx="3"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="commission" style="margin-bottom: 2.25rem; scroll-margin-top: 12px;">
+      <h2 style="font-size: 17px; margin: 0 0 1rem; font-weight: 500;">委託流程</h2>
+      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; text-align: center; margin-bottom: 1.75rem;">
+        <div>
+          <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--color-background-secondary); color: var(--color-text-primary); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; margin: 0 auto 6px;">1</div>
+          <div style="font-size: 12px; font-weight: 500;">洽詢</div>
+          <div style="font-size: 10px; color: var(--color-text-secondary); margin-top: 2px;">聊聊需求</div>
+        </div>
+        <div>
+          <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--color-background-secondary); color: var(--color-text-primary); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; margin: 0 auto 6px;">2</div>
+          <div style="font-size: 12px; font-weight: 500;">報價</div>
+          <div style="font-size: 10px; color: var(--color-text-secondary); margin-top: 2px;">回覆價格</div>
+        </div>
+        <div>
+          <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--color-background-secondary); color: var(--color-text-primary); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; margin: 0 auto 6px;">3</div>
+          <div style="font-size: 12px; font-weight: 500;">訂金</div>
+          <div style="font-size: 10px; color: var(--color-text-secondary); margin-top: 2px;">50% 開工</div>
+        </div>
+        <div>
+          <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--color-background-secondary); color: var(--color-text-primary); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; margin: 0 auto 6px;">4</div>
+          <div style="font-size: 12px; font-weight: 500;">繪製</div>
+          <div style="font-size: 10px; color: var(--color-text-secondary); margin-top: 2px;">草圖 / 完稿</div>
+        </div>
+        <div>
+          <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--color-background-secondary); color: var(--color-text-primary); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; margin: 0 auto 6px;">5</div>
+          <div style="font-size: 12px; font-weight: 500;">交付</div>
+          <div style="font-size: 10px; color: var(--color-text-secondary); margin-top: 2px;">付尾款</div>
+        </div>
+      </div>
+
+      <h3 style="font-size: 15px; margin: 0 0 12px; font-weight: 500;">價格參考</h3>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
+        <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 14px;">
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px;">頭像</div>
+          <div style="font-size: 16px; font-weight: 500;">NT$ 500+</div>
+        </div>
+        <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 14px;">
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px;">半身</div>
+          <div style="font-size: 16px; font-weight: 500;">NT$ 1,500+</div>
+        </div>
+        <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 14px;">
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px;">全身</div>
+          <div style="font-size: 16px; font-weight: 500;">NT$ 3,000+</div>
+        </div>
+      </div>
+      <p style="font-size: 11px; color: var(--color-text-tertiary); margin: 8px 0 0; text-align: center;">商業用途另計 · 正式報價以訊息確認為準</p>
+    </section>
+
+    <section id="terms" style="margin-bottom: 2.25rem; scroll-margin-top: 12px;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 1rem;">
+        <h2 style="font-size: 17px; margin: 0; font-weight: 500;">委託須知重點</h2>
+        <a href="#" onclick="sendPrompt('展示完整接案須知頁面的 mockup'); return false;" style="font-size: 12px; color: var(--color-text-secondary); text-decoration: none;">完整版 →</a>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
+        <div style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 12px 14px;">
+          <div style="font-size: 13px; font-weight: 500; margin-bottom: 4px;">預設個人使用</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); line-height: 1.5;">商業用途（印刷、販售、廣告）請另外談授權</div>
+        </div>
+        <div style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 12px 14px;">
+          <div style="font-size: 13px; font-weight: 500; margin-bottom: 4px;">禁止 AI 訓練</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); line-height: 1.5;">不可用於 AI 學習、LoRA 或 NFT 鑄造</div>
+        </div>
+        <div style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 12px 14px;">
+          <div style="font-size: 13px; font-weight: 500; margin-bottom: 4px;">訂金開工後不退</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); line-height: 1.5;">草圖完成後取消，訂金恕不退還</div>
+        </div>
+        <div style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 12px 14px;">
+          <div style="font-size: 13px; font-weight: 500; margin-bottom: 4px;">原始檔不提供</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); line-height: 1.5;">僅交付成品 PNG，不提供 PSD / CLIP</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-bottom: 1.5rem; scroll-margin-top: 12px;">
+      <h2 style="font-size: 17px; margin: 0 0 1rem; font-weight: 500;">委託詢問</h2>
+      <div style="display: grid; gap: 10px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <input type="text" placeholder="姓名 / 暱稱" style="font-size: 13px;"/>
+          <input type="email" placeholder="Email / 聯絡方式" style="font-size: 13px;"/>
+        </div>
+        <select style="font-size: 13px;">
+          <option>委託類型</option>
+          <option>頭像</option>
+          <option>半身</option>
+          <option>全身</option>
+          <option>其他 / 不確定</option>
+        </select>
+        <input type="text" placeholder="預算範圍（例：NT$ 1,500–3,000）" style="font-size: 13px;"/>
+        <textarea placeholder="需求描述（角色設定、用途、參考圖連結）" rows="3" style="font-size: 13px; font-family: var(--font-sans); resize: vertical; padding: 10px 12px;"></textarea>
+        <label style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--color-text-secondary);">
+          <input type="checkbox" id="agree-tos" style="margin: 0;"/>
+          我已閱讀並同意委託須知
+        </label>
+        <button id="submit-btn" style="font-size: 13px; padding: 10px 20px;">送出委託詢問</button>
+      </div>
+    </section>
+
+    <footer style="border-top: 0.5px solid var(--color-border-tertiary); padding-top: 14px; display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--color-text-tertiary); flex-wrap: wrap; gap: 8px;">
+      <div>© 2026 EOS Studio</div>
+      <div style="display: flex; gap: 12px;">
+        <a href="#" style="color: inherit; text-decoration: none;">Plurk</a>
+        <a href="#" style="color: inherit; text-decoration: none;">Twitter</a>
+        <a href="#" style="color: inherit; text-decoration: none;">Pixiv</a>
+        <a href="#" style="color: inherit; text-decoration: none;">Email</a>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('a[data-nav]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+document.getElementById('submit-btn')?.addEventListener('click', e => {
+  const agreed = document.getElementById('agree-tos')?.checked;
+  if (!agreed) {
+    alert('請先勾選「我已閱讀並同意委託須知」');
+    return;
+  }
+  sendPrompt('模擬送出委託表單後的確認畫面');
+});
+</script>
