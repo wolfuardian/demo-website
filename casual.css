@@ -1,0 +1,127 @@
+/* 社群版（Plurk 長文貼文風）
+   只在 casual.html 掛載，不污染其他頁面 */
+
+.casual-body {
+  background: var(--color-background-secondary);
+  padding: 1.5rem 1rem;
+  margin: 0;
+}
+
+.casual-back {
+  display: inline-block;
+  max-width: 540px;
+  width: calc(100% - 2rem);
+  margin: 0 auto 12px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 0 4px;
+}
+.casual-back:hover { color: var(--color-text-primary); }
+
+.casual-post {
+  max-width: 540px;
+  margin: 0 auto;
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-md);
+  padding: 1.75rem 1.5rem;
+  border: 0.5px solid var(--color-border-tertiary);
+  line-height: 1.9;
+  font-size: 14px;
+  color: var(--color-text-primary);
+}
+
+/* 頁首三行：置頂標記 / 標題 / 副標 */
+.casual-meta {
+  text-align: center;
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  margin-bottom: 4px;
+  font-family: var(--font-mono);
+}
+.casual-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.casual-sub {
+  text-align: center;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+/* 虛線分隔 — 等寬字體 + 字距讓間距均勻 */
+.casual-hr, .casual-dots {
+  text-align: center;
+  color: var(--color-text-tertiary);
+  font-family: var(--font-mono);
+}
+.casual-hr {
+  font-size: 11px;
+  letter-spacing: 4px;
+  margin: 0 0 1.25rem;
+}
+.casual-dots {
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin: 1rem 0;
+}
+.casual-hr:last-of-type { margin: 1.25rem 0 0.5rem; }
+
+.casual-badge {
+  text-align: center;
+  background: var(--color-background-success);
+  color: var(--color-text-success);
+  padding: 10px;
+  border-radius: var(--border-radius-md);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+/* Section — 每段一個 emoji 標題 + 直式清單 */
+.casual-post section { margin-bottom: 1rem; }
+.casual-post h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 4px;
+  color: var(--color-text-primary);
+}
+.casual-post h3.warn { color: var(--color-text-danger); }
+
+.casual-post .gap-top { margin-top: 6px; }
+.casual-post .aside {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-top: 6px;
+}
+.casual-post .accent {
+  color: var(--color-text-info);
+  font-weight: 500;
+}
+.casual-post strong { font-weight: 500; }
+.casual-post .mono { font-family: var(--font-mono); font-weight: 500; }
+
+/* 價目表 — 兩欄 flex，等寬對齊 */
+.price-list {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 2;
+}
+.price-list > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-list {
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.casual-end {
+  text-align: center;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
